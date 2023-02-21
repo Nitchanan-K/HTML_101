@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="exercise_stylesheet.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form Exercise</title>
+</head>
+<body>
+    <!-- header H1 -->
+    <h1>Travel reservation form</h1>
+    
+    <form>
+        <!-- Name section -->
+        <label for="name">Full name*:</label>
+        <br><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <!-- Email section -->
+        <label for="email">Email address*:</label>
+        <br><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <!-- Select Tour Package section -->
+        <label for="gender">Select Tour Package:</label>
+        <br><br>
+        <select id="country" name="country">
+            <option value="goa">Goa</option>
+            <option value="ayutthaya experience">Ayutthaya Experience</option>
+            <option value="bangkok landmarks">Bangkok Landmarks</option>
+            <option value="chao phraya princess dinner cruise">Chao Phraya Princess Dinner Cruise</option>
+          </select>
+        <br>
+        <br>
+
+        <!-- Arrival Date section -->
+        <label for="arrival date">Arrival date:</label>
+        <br><br>
+        <input type="date" id="arrival_date" name="arrival date">
+        <br>
+        <br>
+    
+        <!-- Number of persons section-->
+        <label for="number_of_persons">Number of persons*:</label><br><br>
+        <input type="number" id="number_of_persons" name="Number of persons" min="1">
+        <br>
+        <br>
+        <br>
+
+        <!-- What would you want to avail section-->
+        <label for="hobbies">What would you want to avail?*:</label>
+        <br>
+        <br>
+        <input type="checkbox" id="boarding" name="avail" value="boarding">
+        <label for="boarding">Boarding</label><br>
+        <input type="checkbox" id="Fooding" name="avail" value="fooding">
+        <label for="fooding">Fooding</label><br>
+        <input type="checkbox" id="sight_seeing" name="avail" value="sight_seeing">
+        <label for="sight_seeing">Sight seeing</label><br>
+        <br>
+
+        <!-- Discout Coupon Code section -->
+        <label for=discout_coupon_code">Discout Coupon Code:</label>
+        <br>
+        <input type="text" id="discout_coupon_code" name="discout_coupon_code">
+        <br><br>
+        
+        <hr>
+        <br>
+        <label for=terms_and_conditions"  style= text-align:center>Terms and Conditions*</label>
+        <br>
+        <br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">I agree</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">I disagree</label>
+        <br>
+        <br>
+
+        <input type="submit" value="Complete reservation">
+        
+      </form>
+
+
+</body>
+</html>

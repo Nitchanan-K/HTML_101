@@ -9,18 +9,18 @@
 </head>
 <body>
     <!-- header H1 -->
-    <h1>Travel reservation form</h1>
+    <h1 id="header_text">Travel reservation form</h1>
     
-    <form>
+    <form class="content">
         <!-- Name section -->
         <label for="name">Full name*:</label>
         <br><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <input type="text" id="name" name="name" placeholder="Full name" required><br><br>
         
         <!-- Email section -->
         <label for="email">Email address*:</label>
         <br><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Email address" required><br><br>
         
         <!-- Select Tour Package section -->
         <label for="gender">Select Tour Package:</label>
@@ -43,7 +43,7 @@
     
         <!-- Number of persons section-->
         <label for="number_of_persons">Number of persons*:</label><br><br>
-        <input type="number" id="number_of_persons" name="Number of persons" min="1">
+        <input type="number" id="number_of_persons" name="Number of persons" min="1" placeholder="Number of Persons" >
         <br>
         <br>
         <br>
@@ -61,27 +61,49 @@
         <br>
 
         <!-- Discout Coupon Code section -->
-        <label for=discout_coupon_code">Discout Coupon Code:</label>
         <br>
-        <input type="text" id="discout_coupon_code" name="discout_coupon_code">
+        <label for="discout_coupon_code" >Discout Coupon Code:</label>
         <br><br>
-        
+        <input type="text" id="discout_coupon_code" name="discout_coupon_code" placeholder="Coupon Code">
+        <br><br>
         <hr>
+
+        <!-- Terms and conditons section-->
         <br>
-        <label for=terms_and_conditions"  style= text-align:center>Terms and Conditions*</label>
-        <br>
-        <br>
+        
+        <div style="text-align: center;">
+        <label for="terms_and_conditions" id="terms_and_conditions"> Terms and Conditions* </label>
+        <br><br>
+
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">I agree</label>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">I disagree</label>
-        <br>
-        <br>
+        <br><br>
 
+        <!-- submit button -->
         <input type="submit" value="Complete reservation">
-        
+        </div>
       </form>
 
+      <script>
+        const form = document.querySelector('form');
+        const nameInput = document.querySelector('#name');
+        const emailInput = document.querySelector('#email');
+        
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const nameValue = nameInput.value.trim();
+          const emailValue = emailInput.value.trim();
+          if (nameValue === '' || emailValue === '') {
+            alert('Please fill in all fields!');
+          } else {
+            alert('Form submitted!');
+          }
+        });
+      </script>
+    
+    
 
 </body>
 </html>

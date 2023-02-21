@@ -12,6 +12,7 @@
     <h1 id="header_text">Travel reservation form</h1>
     
     <form class="content">
+
         <!-- Name section -->
         <label for="name">Full name*:</label>
         <br><br>
@@ -80,12 +81,18 @@
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">I disagree</label>
         <br><br>
+      </div>
 
         <!-- submit button -->
-        <input type="submit" value="Complete reservation">
-        </div>
+        
+        <input type="submit" value="Complete reservation" id="btn" >
+      </div>
       </form>
 
+
+      <!-- ADD SCRIPT TO WEBPAGE FOR INTERACTIVE-->
+
+      <!-- Add Alert Event when submit from-->
       <script>
         const form = document.querySelector('form');
         const nameInput = document.querySelector('#name');
@@ -97,13 +104,26 @@
           const emailValue = emailInput.value.trim();
           if (nameValue === '' || emailValue === '') {
             alert('Please fill in all fields!');
-          } else {
-            alert('Form submitted!');
-          }
+          } 
         });
       </script>
+
+      <!-- SCRIPT function for button movement-->
+      <script >
+        const button = document.getElementById('btn');
+       
+        
+      if (emailInput.value == '') {  
+        button.addEventListener('mouseover', function (){
+        button.style.left = `${Math.ceil(Math.random() * 90)}%`;
+        button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+    })
+    button.addEventListener('click', function () {
+        alert('you clicked me')
+    })  
     
-    
+  }   
+    </script>
 
 </body>
 </html>

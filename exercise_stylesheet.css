@@ -93,3 +93,11 @@ body {
    #terms_and_conditions{
     text-align: center;
    }
+
+   #btn{
+    position: absolute;
+    transition: all 0.75s ease;
+  }
+
+
+  

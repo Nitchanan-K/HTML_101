@@ -1,12 +1,20 @@
 const button = document.getElementById('btn');
+const emailInput = document.getElementById('email');
+const nameInput = document.getElementById('name');
 
-button.addEventListener('mouseover', function (){
-    button.style.left = `${Math.ceil(Math.random() * 90)}%`;
-    button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+button.addEventListener('mouseover', function(){
+    if (emailInput.value && nameInput.value){
+       button.style.position = 'fixed';
+       
+    } else{
+        button.style.left = `${Math.ceil(Math.random() * 90)}%`;
+        button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+        button.style.position = 'absolute';
+    }
+
 })
-button.addEventListener('click', function () {
-    alert('you clicked me')
-}) 
+
+
 
 /*
 emailInput.addEventListener("input", function() {
@@ -15,4 +23,4 @@ emailInput.addEventListener("input", function() {
     }
     });
 
-    /*
+    */

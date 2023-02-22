@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("images/bg_form_2.jpg") ;
+    /*background-image: url("images/bg_form_2.jpg") ;
     /* Center and scale the image */
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body {
       background-position: 0 0;
     }
     to {
-      background-position: 100% 100%;
+      background-position: 75% 75%;
     }
   }
 
@@ -95,9 +95,17 @@ body {
    }
 
    #btn{
-    position: absolute;
+    position: relative;
     transition: all 0.75s ease;
   }
 
+ /* viedo as a backgournd*/
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
 
-  
